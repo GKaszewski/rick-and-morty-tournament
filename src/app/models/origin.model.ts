@@ -1,4 +1,4 @@
-class Origin {
+export class Origin {
     name: string;
     url: string;
 }
