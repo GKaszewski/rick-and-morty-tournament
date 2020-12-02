@@ -1,4 +1,5 @@
 import Location from './location.model';
+import { Origin } from './origin.model';
 
 export class Character {
     _id: number;
