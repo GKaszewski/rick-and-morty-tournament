@@ -23,6 +23,6 @@ export class ApiService {
     }
 
     rateCharacters(data: RateCharactersData) {
-        return this.http.post(this.apiRoot.concat('/rating/'), data, { responseType: 'text' });
+        return this.http.post(this.apiRoot.concat('/rate/'), data, { responseType: 'text' });
     }
 }
