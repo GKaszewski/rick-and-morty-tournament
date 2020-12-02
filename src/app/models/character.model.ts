@@ -1,6 +1,6 @@
 import Location from './location.model';
 
-class Character {
+export class Character {
     _id: number;
     id: number;
     name: string;
