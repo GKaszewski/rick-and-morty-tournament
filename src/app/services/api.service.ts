@@ -10,19 +10,19 @@ interface RateCharactersData {
 
 @Injectable()
 export class ApiService {
-    private apiRoot = 'localhost:5000';
+    private apiRoot = 'http://localhost:5000';
 
     constructor(private http: HttpClient) { }
 
     fetchCharactersFromAPI() {
-        return this.http.get(this.apiRoot.concat('/fetch-characters'));
+        return this.http.get(this.apiRoot.concat('/fetch-characters/'), { responseType: 'text' });
     }
 
     getCharacters(): Observable<Character[]> {
-        return this.http.get<Character[]>(this.apiRoot.concat('/characters'));
+        return this.http.get<Character[]>(this.apiRoot.concat('/characters/'));
     }
 
     rateCharacters(data: RateCharactersData) {
-        return this.http.post(this.apiRoot.concat('/rating'), data);
+        return this.http.post(this.apiRoot.concat('/rating/'), data, { responseType: 'text' });
     }
 }
