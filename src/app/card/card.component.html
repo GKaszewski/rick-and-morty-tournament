@@ -1,0 +1,39 @@
+<div [ngClass]="{'flip-card': isClicked}" class="card bg-gray-300 flex flex-col items-center shadow-lg rounded p-1">
+    <div class="card-inner">
+        <div class="card-front flex flex-col items-center">
+            <h1 class="text-lg font-bold">{{data.name}}</h1>
+            <img class="avatar" [src]="data.image">
+            <h2 class="text-lg text-center font-bold">Info</h2>
+            <div class="w-full md:w-2/3">
+                <table class="table-auto text-left">
+                    <thead>
+                        <tr>
+                            <th>Species</th>
+                            <td>{{data.species}}</td>
+                        </tr>
+                        <tr>
+                            <th>Gender</th>
+                            <td>{{data.gender}}</td>
+                        </tr>
+                        <tr>
+                            <th>Status</th>
+                            <td>{{data.status}}</td>
+                        </tr>
+                        <tr>
+                            <th>Origin</th>
+                            <td>{{data.origin.name}}</td>
+                        </tr>
+                        <tr>
+                            <th>Last location</th>
+                            <td>{{data.location.name}}</td>
+                        </tr>
+                    </thead>
+                </table>
+            </div>
+        </div>
+        <div class="card-back">
+
+        </div>
+    </div>
+
+</div>
