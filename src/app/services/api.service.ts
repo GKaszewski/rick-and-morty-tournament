@@ -10,7 +10,7 @@ interface RateCharactersData {
 
 @Injectable()
 export class ApiService {
-    private apiRoot = 'http://localhost:5000';
+    private apiRoot = 'https://rick-and-morty-tournament-api.herokuapp.com';
 
     constructor(private http: HttpClient) { }
 
