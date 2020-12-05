@@ -17,7 +17,7 @@
   </div>
   <button *ngIf="rivals[0] != null" class="bg-gray-50 p-2 rounded w-24 shadow" (click)="skip()">Skip >></button>
   <span></span>
-  <h1 class="text-white text-4xl">Top 10</h1>
+  <h1 *ngIf="rivals[0] != null" class="text-white text-4xl">Top 10</h1>
   <app-table [characters]="characters.slice(0, 9)"></app-table>
   <span class="flex-1"></span>
   <p class="m-1 text-white">Copyright {{currentYear}} Gabriel Kaszewski</p>
