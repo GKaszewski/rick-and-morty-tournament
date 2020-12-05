@@ -105,7 +105,9 @@ export class AppComponent implements OnInit, OnDestroy {
 
   skip() {
     this.skipped = true;
-    this.generateNewRivals();
-    setTimeout(() => { this.skipped = false; }, 1000)
+    setTimeout(() => {
+      this.skipped = false;
+      this.generateNewRivals();
+    }, 1000);
   }
 }
