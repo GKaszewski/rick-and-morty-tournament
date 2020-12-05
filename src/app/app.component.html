@@ -10,11 +10,12 @@
   <app-spinner *ngIf="(loaderService.isLoading | async) && !voting"></app-spinner>
   <div class="flex flex-wrap flex-row gap-1 items-center justify-center w-full">
     <app-card *ngIf="rivals[0] != null && (!voting || votedLeft)" [isClicked]="voting" [data]="rivals[0]"
-      [isRight]="false" (click)="rateCharacters(0,1, true)"></app-card>
+      [isRight]="false" (click)="rateCharacters(0,1, true)" [skipped]="skipped"></app-card>
     <app-card *ngIf="rivals[1] != null && (!voting || !votedLeft)" [isClicked]="voting" [data]="rivals[1]"
-      [isRight]="true" (click)="rateCharacters(1,0, false)">
+      [isRight]="true" (click)="rateCharacters(1,0, false)" [skipped]="skipped">
     </app-card>
   </div>
+  <button *ngIf="rivals[0] != null" class="bg-gray-50 p-2 rounded w-24 shadow" (click)="skip()">Skip >></button>
   <span></span>
   <h1 class="text-white text-4xl">Top 10</h1>
   <app-table [characters]="characters.slice(0, 9)"></app-table>

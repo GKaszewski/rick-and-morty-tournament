@@ -1,4 +1,4 @@
-<div [ngClass]="{'flip-card': isClicked}"
+<div [ngClass]="{'flip-card': isClicked || skipped}"
     class="card bg-gray-300 flex flex-col items-center shadow-lg rounded p-1 transform transition ease-in-out md:hover:scale-105">
     <div class="card-inner">
         <div class="card-front flex flex-col items-center">

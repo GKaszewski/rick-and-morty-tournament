@@ -21,6 +21,7 @@ export class AppComponent implements OnInit, OnDestroy {
   currentYear = 0;
   voting = false;
   votedLeft = false;
+  skipped = false;
 
   constructor(private api: ApiService, public loaderService: LoaderService) { }
 
@@ -100,5 +101,11 @@ export class AppComponent implements OnInit, OnDestroy {
       this.setCharactersAfterVoting();
     });
 
+  }
+
+  skip() {
+    this.skipped = true;
+    this.generateNewRivals();
+    setTimeout(() => { this.skipped = false; }, 1000)
   }
 }

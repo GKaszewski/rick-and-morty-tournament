@@ -13,6 +13,7 @@ export class CardComponent implements OnInit {
   isRight: boolean = false;
   @Input() data: Character;
   @Input() isClicked = false;
+  @Input() skipped = false;
 
   constructor() { }
 
